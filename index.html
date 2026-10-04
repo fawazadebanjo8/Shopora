@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shopora - Modern Online Store</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         LOADING SCREEN
+    ========================== -->
+
+    <div class="loader" id="loader">
+
+        <div class="loader-logo">
+            Shopora
+        </div>
+
+        <div class="loader-spinner"></div>
+
+    </div>
+
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                Shopora
+            </div>
+
+
+            <button id="menuToggle" class="menu-toggle" aria-label="Open menu">
+                ☰
+            </button>
+
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#home">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#shop">
+                        Shop
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#categories">
+                        Categories
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#about">
+                        About
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <div class="nav-actions">
+
+                <button id="searchButton">
+                    Search
+                </button>
+
+                <button id="cartButton">
+                    Cart (0)
+                </button>
+
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    🌙
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main>
+
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <section id="home" class="hero">
+
+            <div class="hero-content">
+
+                <p>
+                    WELCOME TO SHOPORA
+                </p>
+
+                <h1>
+                    Everything you need.
+                    All in one place.
+                </h1>
+
+                <p>
+                    Discover quality products,
+                    simple shopping and a better
+                    online experience.
+                </p>
+
+                <button onclick="
+                        document
+                        .querySelector('#shop')
+                        .scrollIntoView({
+                            behavior: 'smooth'
+                        })
+                    ">
+                    Shop Now
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CATEGORIES
+        ========================== -->
+
+        <section id="categories" class="categories">
+
+            <h2>
+                Shop by Category
+            </h2>
+
+
+            <div class="category-container">
+
+
+                <a href="#shop" class="category-card">
+
+                    <h3>
+                        Electronics
+                    </h3>
+
+                </a>
+
+
+                <a href="#shop" class="category-card">
+
+                    <h3>
+                        Fashion
+                    </h3>
+
+                </a>
+
+
+                <a href="#shop" class="category-card">
+
+                    <h3>
+                        Accessories
+                    </h3>
+
+                </a>
+
+
+                <a href="#shop" class="category-card">
+
+                    <h3>
+                        Home & Living
+                    </h3>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+        <!-- FEATURED PRODUCTS -->
+        <section id="featured" class="featured-section">
+
+            <div class="section-header">
+                <p class="section-label">SHOPORA PICKS</p>
+                <h2>Featured Products</h2>
+                <p>
+                    Discover some of our most popular products,
+                    carefully selected for you.
+                </p>
+            </div>
+
+            <div class="featured-grid">
+
+                <div class="featured-card">
+                    <span class="featured-badge">Popular</span>
+
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" alt="Wireless Headphones">
+
+                    <div class="featured-info">
+                        <h3>Wireless Headphones</h3>
+                        <p>Premium sound for everyday listening.</p>
+                        <div class="featured-bottom">
+                            <strong>$89.99</strong>
+                            <a href="#shop">View Product</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="featured-card">
+                    <span class="featured-badge">Trending</span>
+
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="Smart Watch">
+
+                    <div class="featured-info">
+                        <h3>Smart Watch</h3>
+                        <p>Stay connected wherever you go.</p>
+                        <div class="featured-bottom">
+                            <strong>$129.99</strong>
+                            <a href="#shop">View Product</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="featured-card">
+                    <span class="featured-badge">New</span>
+
+                    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62" alt="Minimal Backpack">
+
+                    <div class="featured-info">
+                        <h3>Minimal Backpack</h3>
+                        <p>Simple, stylish and perfect for everyday use.</p>
+                        <div class="featured-bottom">
+                            <strong>$59.99</strong>
+                            <a href="#shop">View Product</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PRODUCTS
+        ========================== -->
+
+        <section id="shop" class="products">
+
+
+            <div class="products-header">
+
+                <h2>
+                    Featured Products
+                </h2>
+
+
+                <div class="search-box">
+
+                    <input type="text" id="searchInput" placeholder="Search products..." autocomplete="off">
+
+                    <button id="productSearchButton">
+                        Search
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-container" id="productContainer">
+
+
+                <!-- PRODUCT 1 -->
+
+                <div class="product-card">
+
+                    <span class="product-badge">
+                        Popular
+                    </span>
+
+                    <img class="product-image" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
+                        alt="Wireless Headphones">
+
+                    <h3>
+                        Wireless Headphones
+                    </h3>
+
+                    <p>
+                        $89.99
+                    </p>
+
+
+                    <button>
+                        Add to Cart
+                    </button>
+
+
+                    <button class="quick-view-btn" onclick="
+                            quickView(
+                                'Wireless Headphones',
+                                '$89.99',
+                                'Premium wireless headphones with high-quality sound and comfortable design.'
+                            )
+                        ">
+                        Quick View
+                    </button>
+
+                </div>
+
+
+
+                <!-- PRODUCT 2 -->
+
+                <div class="product-card">
+
+                    <span class="product-badge">
+                        New
+                    </span>
+
+                    <img class="product-image" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30"
+                        alt="Smart Watch">
+
+                    <h3>
+                        Smart Watch
+                    </h3>
+
+                    <p>
+                        $129.99
+                    </p>
+
+
+                    <button>
+                        Add to Cart
+                    </button>
+
+
+                    <button class="quick-view-btn" onclick="
+                            quickView(
+                                'Smart Watch',
+                                '$129.99',
+                                'A modern smart watch with useful features, stylish design and everyday convenience.'
+                            )
+                        ">
+                        Quick View
+                    </button>
+
+                </div>
+
+
+
+                <!-- PRODUCT 3 -->
+
+                <div class="product-card">
+
+                    <span class="product-badge">
+                        Popular
+                    </span>
+
+                    <img class="product-image" src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62"
+                        alt="Minimal Backpack">
+
+                    <h3>
+                        Minimal Backpack
+                    </h3>
+
+                    <p>
+                        $59.99
+                    </p>
+
+
+                    <button>
+                        Add to Cart
+                    </button>
+
+
+                    <button class="quick-view-btn" onclick="
+                            quickView(
+                                'Minimal Backpack',
+                                '$59.99',
+                                'A lightweight and stylish backpack designed for everyday use, school and travel.'
+                            )
+                        ">
+                        Quick View
+                    </button>
+
+                </div>
+
+
+
+                <!-- PRODUCT 4 -->
+
+                <div class="product-card">
+
+                    <span class="product-badge">
+                        Sale
+                    </span>
+
+                    <img class="product-image" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff"
+                        alt="Running Sneakers">
+
+                    <h3>
+                        Running Sneakers
+                    </h3>
+
+                    <p>
+                        $79.99
+                    </p>
+
+
+                    <button>
+                        Add to Cart
+                    </button>
+
+
+                    <button class="quick-view-btn" onclick="
+                            quickView(
+                                'Running Sneakers',
+                                '$79.99',
+                                'Comfortable running sneakers designed for everyday movement, exercise and active lifestyles.'
+                            )
+                        ">
+                        Quick View
+                    </button>
+
+                </div>
+
+
+
+                <!-- PRODUCT 5 -->
+
+                <div class="product-card">
+
+                    <span class="product-badge">
+                        Featured
+                    </span>
+
+                    <img class="product-image" src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32"
+                        alt="Digital Camera">
+
+                    <h3>
+                        Digital Camera
+                    </h3>
+
+                    <p>
+                        $349.99
+                    </p>
+
+
+                    <button>
+                        Add to Cart
+                    </button>
+
+
+                    <button class="quick-view-btn" onclick="
+                            quickView(
+                                'Digital Camera',
+                                '$349.99',
+                                'A versatile digital camera for capturing clear, detailed photos and memorable moments.'
+                            )
+                        ">
+                        Quick View
+                    </button>
+
+                </div>
+
+
+
+                <!-- PRODUCT 6 -->
+
+                <div class="product-card">
+
+                    <span class="product-badge">
+                        New
+                    </span>
+
+                    <img class="product-image" src="https://images.unsplash.com/photo-1511499767150-a48a237f0083"
+                        alt="Classic Sunglasses">
+
+                    <h3>
+                        Classic Sunglasses
+                    </h3>
+
+                    <p>
+                        $39.99
+                    </p>
+
+
+                    <button>
+                        Add to Cart
+                    </button>
+
+
+                    <button class="quick-view-btn" onclick="
+                            quickView(
+                                'Classic Sunglasses',
+                                '$39.99',
+                                'A classic and stylish pair of sunglasses designed to complement your everyday look.'
+                            )
+                        ">
+                        Quick View
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+            <p id="noResults">
+                No products found.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             WHY SHOPORA
+        ========================== -->
+
+        <section id="about" class="why-shop">
+
+            <div class="why-shop-header">
+
+                <p>
+                    WHY SHOPORA
+                </p>
+
+                <h2>
+                    Shopping made simple.
+                </h2>
+
+                <span>
+                    Everything you need for a smooth
+                    shopping experience.
+                </span>
+
+            </div>
+
+
+            <div class="benefits-container">
+
+
+                <div class="benefit-card">
+
+                    <div class="benefit-icon">
+                        ✓
+                    </div>
+
+                    <h3>
+                        Quality Products
+                    </h3>
+
+                    <p>
+                        Carefully selected products
+                        made to fit your everyday needs.
+                    </p>
+
+                </div>
+
+
+                <div class="benefit-card">
+
+                    <div class="benefit-icon">
+                        →
+                    </div>
+
+                    <h3>
+                        Fast Delivery
+                    </h3>
+
+                    <p>
+                        Get your orders delivered
+                        quickly and conveniently.
+                    </p>
+
+                </div>
+
+
+                <div class="benefit-card">
+
+                    <div class="benefit-icon">
+                        ★
+                    </div>
+
+                    <h3>
+                        Trusted Shopping
+                    </h3>
+
+                    <p>
+                        A simple and secure shopping
+                        experience from start to finish.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CUSTOMER REVIEWS
+        ========================== -->
+
+        <section class="reviews">
+
+            <div class="reviews-header">
+
+                <p>
+                    WHAT CUSTOMERS SAY
+                </p>
+
+                <h2>
+                    Loved by our customers.
+                </h2>
+
+                <span>
+                    Real experiences from people
+                    who shop with Shopora.
+                </span>
+
+            </div>
+
+
+            <div class="reviews-container">
+
+
+                <div class="review-card">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "The products are exactly as shown.
+                        Everything arrived quickly and safely."
+                    </p>
+
+                    <h4>
+                        Daniel A.
+                    </h4>
+
+                    <span>
+                        Verified Customer
+                    </span>
+
+                </div>
+
+
+                <div class="review-card">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "I really like how simple the
+                        website is. Finding what I needed
+                        was very easy."
+                    </p>
+
+                    <h4>
+                        Sarah M.
+                    </h4>
+
+                    <span>
+                        Verified Customer
+                    </span>
+
+                </div>
+
+
+                <div class="review-card">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "Great shopping experience.
+                        The checkout process was smooth
+                        and simple."
+                    </p>
+
+                    <h4>
+                        Michael K.
+                    </h4>
+
+                    <span>
+                        Verified Customer
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             NEWSLETTER
+        ========================== -->
+
+        <section class="newsletter">
+
+            <div class="newsletter-content">
+
+                <p>
+                    STAY UPDATED
+                </p>
+
+                <h2>
+                    Get the latest from Shopora.
+                </h2>
+
+                <span>
+                    Subscribe to receive updates about
+                    new products, special offers and more.
+                </span>
+
+
+                <form id="newsletterForm">
+
+                    <input type="email" id="newsletterEmail" placeholder="Enter your email address" required>
+
+                    <button type="submit">
+                        Subscribe
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         CART PANEL
+    ========================== -->
+
+    <aside class="cart-panel" id="cartPanel">
+
+        <div class="cart-header">
+
+            <h2>
+                Your Cart
+            </h2>
+
+            <button id="closeCart">
+                ×
+            </button>
+
+        </div>
+
+
+        <div id="cartItems">
+
+            <p class="empty-cart">
+                Your cart is empty.
+            </p>
+
+        </div>
+
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+
+                <strong>
+                    Total
+                </strong>
+
+                <strong id="cartTotal">
+                    $0.00
+                </strong>
+
+            </div>
+
+
+            <button class="checkout-btn">
+                Checkout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================
+         CHECKOUT MODAL
+    ========================== -->
+
+    <div class="checkout-modal" id="checkoutModal">
+
+        <div class="checkout-box">
+
+
+            <div class="checkout-header">
+
+                <h2>
+                    Checkout
+                </h2>
+
+                <button id="closeCheckout">
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="checkoutForm">
+
+
+                <label for="customerName">
+                    Full Name
+                </label>
+
+                <input type="text" id="customerName" placeholder="Enter your full name" required>
+
+
+                <label for="customerEmail">
+                    Email Address
+                </label>
+
+                <input type="email" id="customerEmail" placeholder="Enter your email" required>
+
+
+                <label for="customerAddress">
+                    Delivery Address
+                </label>
+
+                <textarea id="customerAddress" placeholder="Enter your delivery address" required></textarea>
+
+
+                <div class="checkout-summary">
+
+                    <strong>
+                        Total
+                    </strong>
+
+                    <strong id="checkoutTotal">
+                        $0.00
+                    </strong>
+
+                </div>
+
+
+                <button type="submit" class="place-order-btn">
+                    Place Order
+                </button>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         ORDER SUCCESS MODAL
+    ========================== -->
+
+    <div class="success-modal" id="successModal">
+
+        <div class="success-box">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2>
+                Order Confirmed!
+            </h2>
+
+            <p>
+                Thank you for shopping with Shopora.
+                Your order has been received successfully.
+            </p>
+
+            <button id="continueShopping">
+                Continue Shopping
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         QUICK VIEW MODAL
+    ========================== -->
+
+    <div class="quick-view-modal" id="quickViewModal">
+
+        <div class="quick-view-content">
+
+
+            <button class="quick-view-close" id="quickViewClose">
+                ×
+            </button>
+
+
+            <h2 id="quickViewName">
+                Product Name
+            </h2>
+
+
+            <p class="quick-view-price" id="quickViewPrice">
+                $0.00
+            </p>
+
+
+            <p id="quickViewDescription">
+                Product description.
+            </p>
+
+
+            <div class="quick-view-quantity">
+
+
+                <button id="quickViewMinus">
+                    −
+                </button>
+
+
+                <span id="quickViewQuantity">
+                    1
+                </span>
+
+
+                <button id="quickViewPlus">
+                    +
+                </button>
+
+
+            </div>
+
+
+            <button class="quick-view-add" id="quickViewAdd">
+                Add to Cart
+            </button>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         BACK TO TOP
+    ========================== -->
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        ↑
+    </button>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+
+        <div class="footer-container">
+
+
+            <div class="footer-brand">
+
+                <h2>
+                    Shopora
+                </h2>
+
+                <p>
+                    A modern online shopping experience
+                    designed to make finding and buying
+                    products simple.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>
+                    Shop
+                </h3>
+
+                <a href="#shop">
+                    Products
+                </a>
+
+                <a href="#categories">
+                    Categories
+                </a>
+
+                <a href="#shop">
+                    Featured
+                </a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>
+                    Company
+                </h3>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#about">
+                    Why Shopora
+                </a>
+
+                <a href="#home">
+                    Home
+                </a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>
+                    Support
+                </h3>
+
+                <a href="#shop">
+                    Help Center
+                </a>
+
+                <a href="#shop">
+                    Shipping
+                </a>
+
+                <a href="#shop">
+                    Returns
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Shopora. All rights reserved.
+            </p>
+
+            <p>
+                Designed for a better shopping experience.
+            </p>
+
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
